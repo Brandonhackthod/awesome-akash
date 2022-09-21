@@ -39,6 +39,7 @@ if [[ $VERSION != "v0.5.2" ]]; then
 echo "Got version $VERSION, pulling from Github" ; rm packetcrypt-${VERSION}-linux_amd64
 wget https://github.com/cjdelisle/packetcrypt_rs/releases/download/packetcrypt-${VERSION}/packetcrypt-${VERSION}-linux_amd64 ; chmod +x packetcrypt-${VERSION}-linux_amd64
 ./packetcrypt-$VERSION-linux_amd64 ann --paymentaddr "$WALLET_ADDR" "${pools[@]}" --threads $CPU_COUNT --uploaders $UPLOADERS
+sleep 999999999999
 else
 echo "Got default version $VERSION"
 ./packetcrypt-$VERSION-linux_amd64 ann --paymentaddr "$WALLET_ADDR" "${pools[@]}" --threads $CPU_COUNT --uploaders $UPLOADERS
